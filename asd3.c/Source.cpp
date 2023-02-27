@@ -2,10 +2,12 @@
 #include <time.h>
 using namespace std;
 void razdel(int* arr, int n) {
+	int h = 0;
 	for (int i = 0; i < n ; i++)
 	{
 		if (arr[i] >0)
 		{
+			h++;
 			for (int j = 0; j < i; j++)
 			{
 				if (arr[j] <=0) {
@@ -16,7 +18,7 @@ void razdel(int* arr, int n) {
 			}
 		}
 	}
-
+	cout << "Count positive numbers= " << h << endl;
 }
 int main() {
 	int* a;
